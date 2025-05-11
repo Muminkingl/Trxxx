@@ -113,8 +113,8 @@ export default function Home() {
           
           <div className="bg-black rounded-md p-3 font-mono text-xs">
             <p className="text-green-400">$ <span className="text-white">echo {domain} | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | urldedupe &gt; {domain}_output.txt</span></p>
-            <p className="text-green-400">$ <span className="text-white">katana -u https://{domain} -d 5 | grep '=' | urldedupe | anew {domain}_output.txt</span></p>
-            <p className="text-green-400">$ <span className="text-white">cat {domain}_output.txt | sed 's/=.*/=/' &gt; {domain}_final.txt</span></p>
+            <p className="text-green-400">$ <span className="text-white">katana -u https://{domain} -d 5 | grep &apos;=&apos; | urldedupe | anew {domain}_output.txt</span></p>
+            <p className="text-green-400">$ <span className="text-white">cat {domain}_output.txt | sed &apos;s/=.*/=/&apos; &gt; {domain}_final.txt</span></p>
           </div>
         </div>
         
@@ -131,8 +131,8 @@ export default function Home() {
           
           <div className="bg-black rounded-md p-3 font-mono text-xs">
             <p className="text-green-400">$ <span className="text-white">echo {domain} | gau --mc 200 | urldedupe &gt; {domain}_urls.txt</span></p>
-            <p className="text-green-400">$ <span className="text-white">cat {domain}_urls.txt | grep -E ".php|.asp|.aspx|.jspx|.jsp" | grep '=' | sort &gt; {domain}_output.txt</span></p>
-            <p className="text-green-400">$ <span className="text-white">cat {domain}_output.txt | sed 's/=.*/=/' &gt; {domain}_final.txt</span></p>
+            <p className="text-green-400">$ <span className="text-white">cat {domain}_urls.txt | grep -E &quot;.php|.asp|.aspx|.jspx|.jsp&quot; | grep &apos;=&apos; | sort &gt; {domain}_output.txt</span></p>
+            <p className="text-green-400">$ <span className="text-white">cat {domain}_output.txt | sed &apos;s/=.*/=/&apos; &gt; {domain}_final.txt</span></p>
           </div>
         </div>
       </div>
